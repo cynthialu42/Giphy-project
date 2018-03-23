@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    width: 90%;
+}
+
+.js-gifs{
+    display: flex;
+    flex-wrap: wrap;
+}
+

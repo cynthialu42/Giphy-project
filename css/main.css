@@ -1,40 +1,52 @@
 .container{
     display: flex;
-    width: 90%;
+    width: 95%;
     justify-content: space-around;
-    background: pink;
     margin: auto;
+    margin-top: 70px;
 }
 
-.gifs{
-    width: 70%;
+.right-col{
+    width: 75%;
     display: flex;
     background: yellow;
     justify-content: space-around;
 }
 
-.buttons{
+.left-col{
     width: 25%;
     display: flex;
     background: purple;
     flex-wrap: wrap;
     justify-content: space-around;
-
-
 }
 
-.newInput{
+
+
+.row{
+    background: papayawhip;
+    width: 100%;
+}
+
+.add-input{
     width: 100%;
     background: orange;
-
-
+    display: flex;
+    justify-content: center;
 }
-.button-section{
+
+.add-buttons{
     width: 100%;
-    justify-content: space-around;
-    background: green;
+    display: flex;
 
 }
+
+.button-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .js-gifs{
     display: flex;
     flex-wrap: wrap;

@@ -11,7 +11,7 @@ $(document).ready(function(){
             let bDiv = $('<button>');
             bDiv.attr("data-name", topics[i]);
             bDiv.addClass("gif-btn");
-            bDiv.text(topics[i]);
+            bDiv.text(topics[i].toUpperCase() + "!");
             $('.button-section').append(bDiv);
         }
     }
@@ -53,8 +53,15 @@ $(document).ready(function(){
             $(this).attr("data-state", "still");
         }
     }
+
+    function displayTitle(query){
+        $('.title').empty().text("WOW " + query.toUpperCase() + " GIFS!!!");
+
+    }
+
     function displayGifs(){
         var query = $(this).attr("data-name");
+        displayTitle(query);
         var limit = "10";
         var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + query + "&api_key=" + apiKey + "&limit=" + limit;
         $.ajax({
@@ -66,13 +73,12 @@ $(document).ready(function(){
                 let gif = $('<img>');
                 let rating = $('<p>');
                 let section = $('<div class = "still-gif" >');
-//  <img src="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-still="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-animate="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200.gif" data-state="still" class="gif">
 
                 let stillGif = response.data[i].images.fixed_height_still.url;
                 let movingGif = response.data[i].images.fixed_height.url
                 let state = "still";
                 gif.attr("src",stillGif).attr("data-still", stillGif).attr("data-animate", movingGif).attr("data-state", state).addClass("gif-img");
-                rating.text(response.data[i].rating);
+                rating.text("Rated: " + response.data[i].rating);
                 section.append(rating).append(gif);
                 $('.js-gifs').append(section);
             }

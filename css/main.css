@@ -1,55 +1,105 @@
+.background{
+    background: black;
+}
+.title{
+    width: 100%;
+    padding: 1em 2em;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(255, 0, 234);
+    font-size: 2em;
+    border-bottom: 2px dashed deepskyblue;
+}
+.title:hover{
+    color: rgb(0, 255, 255);
+}
 .container{
     display: flex;
     width: 95%;
     justify-content: space-around;
     margin: auto;
-    margin-top: 70px;
+
 }
 
 .right-col{
     width: 75%;
     display: flex;
-    background: yellow;
+
     justify-content: space-around;
 }
 
 .left-col{
     width: 25%;
     display: flex;
-    background: purple;
+
     flex-wrap: wrap;
     justify-content: space-around;
+    border-right: 2px dashed turquoise;
+
 }
 
-
-
 .row{
-    background: papayawhip;
+
     width: 100%;
+
 }
 
 .add-input{
     width: 100%;
-    background: orange;
+
     display: flex;
     justify-content: center;
+    margin: 1em 0em;
+    font-family: 'VT323', monospace;
+    color: rgb(251, 255, 0);
 }
 
 .add-buttons{
     width: 100%;
     display: flex;
-
+ 
+  
 }
 
 .button-section{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
+    padding: .5em .5em;
 }
 
 .js-gifs{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.gif-btn{
+    background: none;
+    margin: 5px;
+    border-radius: 10%;
+    padding: .5em .5em;
+    font-family: 'VT323', monospace;
+    border-color: mediumspringgreen;
+    font-size: 1.5em;
+    color: mediumspringgreen;
+
+}
+
+.gif-btn:hover{
+    transform: scale(1.1);
+
+}
+.submit{
+    background: none;
+    margin: 5px;
+    border-radius: 10%;
+    padding: .5em .5em;
+    font-family: 'VT323', monospace;
+    border-color: rgb(251, 255, 0);
+    font-size: 1.2em;
+    color: rgb(251, 255, 0);
+}
+.submit:hover{
+    transform: scale(1.1);
 }
 

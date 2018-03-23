@@ -41,7 +41,7 @@ $(document).ready(function(){
         displayTitle(query);
 
         var limit = "10";
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + query + "&api_key=" + apiKey + "&limit=" + limit;
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + query + "&api_key=" + apiKey + "&limit=" + limit;
         $.ajax({
             url: queryURL,
             method: "GET"

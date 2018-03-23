@@ -1,11 +1,19 @@
 $(document).ready(function(){
     var apiKey = "5jIbhfm2DTsEsvSRNL8beHu0ogreChsM";
-    var query = $('button').attr("name");
-    var limit = "10";
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + query + "&api_key=" + apiKey + "&limit=" + limit;
+   
 
+    var topics = ["cat", "bird", "dog", "obama"];
+
+    for (let i = 0; i < topics.length; i++){
+        let bDiv = $('<button>');
+        bDiv.attr("name", topics[i]);
+        bDiv.text(topics[i]);
+        $('.button-section').append(bDiv);
+    }
     $('button').on('click', function(){
-        console.log("here");
+        var query = $(this).attr("name");
+        var limit = "10";
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + query + "&api_key=" + apiKey + "&limit=" + limit;
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -19,6 +27,7 @@ $(document).ready(function(){
                 $('.js-gifs').append(section);
             }
         });
+        $('.js-gifs').empty();
     });
 
 

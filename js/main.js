@@ -75,6 +75,11 @@ $(document).ready(function(){
         createButtons();
     });
 
+    $('.clear-btn').on('click', function(){
+        $('.button-section').empty();
+        topics = [];
+
+    });
     // Event for button to generate gif
     $(document).on("click", ".gif-btn", displayGifs);
 

@@ -59,6 +59,14 @@
     transform: scale(1.1);
 }
 
+.input{
+    background: mediumspringgreen;
+    color: black;
+    font-family: 'VT323', monospace;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+}
 .add-buttons{
     width: 100%;
     display: flex;
@@ -69,6 +77,7 @@
     flex-wrap: wrap;
     justify-content: left;
     padding: .5em .5em;
+
 }
 
 .gif-btn{
@@ -84,9 +93,28 @@
 
 .gif-btn:hover{
     transform: scale(1.1);
-
 }
 
+.clear{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    padding: .5em .5em;
+}
+.clear-btn{
+    background: none;
+    margin: 10px;
+    border-radius: 10%;
+    padding: .5em .5em;
+    font-family: 'VT323', monospace;
+    border-color: rgb(255, 0, 234);
+    font-size: 1.5em;
+    color: rgb(255, 0, 234);
+}
+
+.clear-btn:hover{
+    transform: scale(1.1);
+}
 /* Right Column Styling */
 .right-col{
     width: 75%;

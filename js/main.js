@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var apiKey = "5jIbhfm2DTsEsvSRNL8beHu0ogreChsM";
    
-    var topics = ["cat", "bird", "dog", "obama","giraffe", "bts", "camel", "elephant", "gerbil"];
+    var topics = ["fail", "win", "funny", "lol", "cats"];
 
     // Generate the buttons
     function createButtons(){

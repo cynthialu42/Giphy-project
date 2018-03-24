@@ -66,6 +66,7 @@
     border: none;
     font-size: 1em;
     font-weight: bold;
+    padding: .5em .1em;
 }
 .add-buttons{
     width: 100%;
